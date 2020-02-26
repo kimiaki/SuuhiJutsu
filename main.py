@@ -15,9 +15,10 @@ import re
 
 ## 関数の作成
 
-# 半角英数字かチェック
+# yyyy/mm/ddかチェック
 def checkAlnum(word):
-    alnum = re.compile(r'^[a-zA-Z0-9]+$')
+    #alnum = re.compile(r'^[a-zA-Z0-9]+$')
+    alnum = re.compile(r"\d{4}/\d{1,2}/\d{1,2}")
     result = alnum.match(word) is not None
     return result
 
