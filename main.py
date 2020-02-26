@@ -173,7 +173,7 @@ def handle_message(event):
     if checkAlnum(input_text):
         output_text = get_pn(input_text)
     else:
-        output_text = "生年月日をyyyy/mm/dd（半角英数字）形式で入力してね！"
+        output_text = "生年月日を「1980/2/14」のように入力してね！"
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=output_text)
